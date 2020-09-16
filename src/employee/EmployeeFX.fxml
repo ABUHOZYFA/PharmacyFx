@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employee.EmployeeController">
+   <children>
+      <Label layoutX="38.0" layoutY="180.0" text="Employee Name" />
+      <TableView fx:id="tvEmployee" layoutX="336.0" layoutY="111.0" onMouseClicked="#selectByMouse" prefHeight="476.0" prefWidth="647.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="35.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="173.0" text="Employee Name" />
+            <TableColumn fx:id="colUsername" prefWidth="89.0" text="Username" />
+            <TableColumn fx:id="colPassword" prefWidth="77.0" text="Password" />
+            <TableColumn fx:id="colDate" prefWidth="85.0" text="Date" />
+            <TableColumn fx:id="colJob" prefWidth="90.0" text="Job" />
+            <TableColumn fx:id="colPhone" prefWidth="104.0" text="Phone" />
+        </columns>
+      </TableView>
+      <Label layoutX="38.0" layoutY="221.0" text="Username" />
+      <Label layoutX="38.0" layoutY="261.0" text="Password" />
+      <Label layoutX="38.0" layoutY="299.0" text="Job" />
+      <Label layoutX="38.0" layoutY="338.0" text="Phone" />
+      <JFXTextField fx:id="tfName" layoutX="135.0" layoutY="156.0" prefWidth="163.0">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextField fx:id="tfUsername" layoutX="135.0" layoutY="193.0" prefWidth="163.0">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </JFXTextField>
+      <JFXPasswordField fx:id="pfPassword" layoutX="135.0" layoutY="233.0" prefWidth="163.0">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </JFXPasswordField>
+      <JFXTextField fx:id="tfJob" layoutX="135.0" layoutY="273.0" prefWidth="163.0">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextField fx:id="tfPhone" layoutX="135.0" layoutY="313.0" prefWidth="163.0">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </JFXTextField>
+      <JFXButton layoutX="24.0" layoutY="415.0" onAction="#insertData" prefHeight="46.0" prefWidth="87.0" style="-fx-background-color: #00B5B8;" text="Insert" textFill="#f5f2f2">
+         <graphic>
+            <MaterialDesignIconView fill="#fffefe" glyphName="ACCOUNT_PLUS" size="20" />
+         </graphic></JFXButton>
+      <JFXButton layoutX="122.0" layoutY="416.0" onAction="#updatData" prefHeight="46.0" prefWidth="87.0" style="-fx-background-color: #00B5B8;" text="Update" textFill="#f5f2f2">
+         <graphic>
+            <FontAwesomeIconView fill="#fffefe" glyphName="COGS" size="20" />
+         </graphic></JFXButton>
+      <JFXButton layoutX="221.0" layoutY="417.0" onAction="#deleteData" prefHeight="46.0" prefWidth="87.0" style="-fx-background-color: #00B5B8;" text="Delete" textFill="#f5f2f2">
+         <graphic>
+            <FontAwesomeIconView fill="#fffefe" glyphName="USER_TIMES" size="20" />
+         </graphic></JFXButton>
+      <JFXButton layoutX="107.0" layoutY="479.0" onAction="#clearField" prefHeight="46.0" prefWidth="121.0" style="-fx-background-color: #00B5B8;" text="Clear Field" textFill="#f5f2f2">
+         <graphic>
+            <FontAwesomeIconView fill="#fffefe" glyphName="UNDO" size="20" />
+         </graphic></JFXButton>
+      <Label layoutX="39.0" layoutY="148.0" text="ID" />
+      <JFXTextField fx:id="tfId" layoutX="135.0" layoutY="136.0" prefHeight="25.0" prefWidth="163.0" />
+   </children>
+</AnchorPane>
